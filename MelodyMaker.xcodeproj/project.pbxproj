@@ -1,0 +1,414 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5739CC682528154B007B7554 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5739CC672528154B007B7554 /* AppDelegate.swift */; };
+		5739CC6A2528154B007B7554 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5739CC692528154B007B7554 /* SceneDelegate.swift */; };
+		5739CC6C2528154B007B7554 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5739CC6B2528154B007B7554 /* ViewController.swift */; };
+		5739CC6F2528154B007B7554 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5739CC6D2528154B007B7554 /* Main.storyboard */; };
+		5739CC7125281557007B7554 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5739CC7025281557007B7554 /* Assets.xcassets */; };
+		5739CC7425281557007B7554 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5739CC7225281557007B7554 /* LaunchScreen.storyboard */; };
+		5739CC80252816EA007B7554 /* GAModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5739CC7F252816EA007B7554 /* GAModel.swift */; };
+		5739CC8725281DCC007B7554 /* NotesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5739CC8625281DCC007B7554 /* NotesModel.swift */; };
+		5739CC8D252838B7007B7554 /* MelodyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5739CC8C252838B6007B7554 /* MelodyModel.swift */; };
+		5739CC982528E85A007B7554 /* A.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5739CC912528E859007B7554 /* A.wav */; };
+		5739CC992528E85A007B7554 /* B.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5739CC922528E85A007B7554 /* B.wav */; };
+		5739CC9A2528E85A007B7554 /* D.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5739CC932528E85A007B7554 /* D.wav */; };
+		5739CC9B2528E85A007B7554 /* F.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5739CC942528E85A007B7554 /* F.wav */; };
+		5739CC9C2528E85A007B7554 /* C.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5739CC952528E85A007B7554 /* C.wav */; };
+		5739CC9D2528E85A007B7554 /* E.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5739CC962528E85A007B7554 /* E.wav */; };
+		5739CC9E2528E85A007B7554 /* G.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5739CC972528E85A007B7554 /* G.wav */; };
+		5739CCA12528E9A3007B7554 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5739CCA02528E9A3007B7554 /* SoundManager.swift */; };
+		5739CCA42528E9FB007B7554 /* Silent.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5739CCA32528E9FA007B7554 /* Silent.wav */; };
+		5739CCA82528FDBC007B7554 /* MakerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5739CCA72528FDBC007B7554 /* MakerViewController.swift */; };
+		5739CCAD252912E1007B7554 /* HitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5739CCAC252912E1007B7554 /* HitViewController.swift */; };
+		5739CCB125294E81007B7554 /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5739CCB025294E80007B7554 /* FinalViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5739CC642528154B007B7554 /* MelodyMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MelodyMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5739CC672528154B007B7554 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5739CC692528154B007B7554 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5739CC6B2528154B007B7554 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5739CC6E2528154B007B7554 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5739CC7025281557007B7554 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5739CC7325281557007B7554 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5739CC7525281557007B7554 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5739CC7F252816EA007B7554 /* GAModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GAModel.swift; sourceTree = "<group>"; };
+		5739CC8625281DCC007B7554 /* NotesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesModel.swift; sourceTree = "<group>"; };
+		5739CC8C252838B6007B7554 /* MelodyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelodyModel.swift; sourceTree = "<group>"; };
+		5739CC912528E859007B7554 /* A.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = A.wav; path = Sounds/A.wav; sourceTree = SOURCE_ROOT; };
+		5739CC922528E85A007B7554 /* B.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = B.wav; path = Sounds/B.wav; sourceTree = SOURCE_ROOT; };
+		5739CC932528E85A007B7554 /* D.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = D.wav; path = Sounds/D.wav; sourceTree = SOURCE_ROOT; };
+		5739CC942528E85A007B7554 /* F.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = F.wav; path = Sounds/F.wav; sourceTree = SOURCE_ROOT; };
+		5739CC952528E85A007B7554 /* C.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = C.wav; path = Sounds/C.wav; sourceTree = SOURCE_ROOT; };
+		5739CC962528E85A007B7554 /* E.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = E.wav; path = Sounds/E.wav; sourceTree = SOURCE_ROOT; };
+		5739CC972528E85A007B7554 /* G.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = G.wav; path = Sounds/G.wav; sourceTree = SOURCE_ROOT; };
+		5739CCA02528E9A3007B7554 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		5739CCA32528E9FA007B7554 /* Silent.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Silent.wav; path = Sounds/Silent.wav; sourceTree = SOURCE_ROOT; };
+		5739CCA72528FDBC007B7554 /* MakerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakerViewController.swift; sourceTree = "<group>"; };
+		5739CCAC252912E1007B7554 /* HitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitViewController.swift; sourceTree = "<group>"; };
+		5739CCB025294E80007B7554 /* FinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5739CC612528154A007B7554 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5739CC5B2528154A007B7554 = {
+			isa = PBXGroup;
+			children = (
+				5739CC662528154B007B7554 /* MelodyMaker */,
+				5739CC652528154B007B7554 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5739CC652528154B007B7554 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5739CC642528154B007B7554 /* MelodyMaker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5739CC662528154B007B7554 /* MelodyMaker */ = {
+			isa = PBXGroup;
+			children = (
+				5739CC672528154B007B7554 /* AppDelegate.swift */,
+				5739CC692528154B007B7554 /* SceneDelegate.swift */,
+				5739CC6B2528154B007B7554 /* ViewController.swift */,
+				5739CCA72528FDBC007B7554 /* MakerViewController.swift */,
+				5739CCAC252912E1007B7554 /* HitViewController.swift */,
+				5739CCB025294E80007B7554 /* FinalViewController.swift */,
+				5739CC8625281DCC007B7554 /* NotesModel.swift */,
+				5739CC8C252838B6007B7554 /* MelodyModel.swift */,
+				5739CC7F252816EA007B7554 /* GAModel.swift */,
+				5739CCA02528E9A3007B7554 /* SoundManager.swift */,
+				5739CC6D2528154B007B7554 /* Main.storyboard */,
+				5739CC7025281557007B7554 /* Assets.xcassets */,
+				5739CC902528E844007B7554 /* Sounds */,
+				5739CC7225281557007B7554 /* LaunchScreen.storyboard */,
+				5739CC7525281557007B7554 /* Info.plist */,
+			);
+			path = MelodyMaker;
+			sourceTree = "<group>";
+		};
+		5739CC902528E844007B7554 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				5739CC912528E859007B7554 /* A.wav */,
+				5739CC922528E85A007B7554 /* B.wav */,
+				5739CC952528E85A007B7554 /* C.wav */,
+				5739CC932528E85A007B7554 /* D.wav */,
+				5739CC962528E85A007B7554 /* E.wav */,
+				5739CC942528E85A007B7554 /* F.wav */,
+				5739CC972528E85A007B7554 /* G.wav */,
+				5739CCA32528E9FA007B7554 /* Silent.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5739CC632528154A007B7554 /* MelodyMaker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5739CC7825281557007B7554 /* Build configuration list for PBXNativeTarget "MelodyMaker" */;
+			buildPhases = (
+				5739CC602528154A007B7554 /* Sources */,
+				5739CC612528154A007B7554 /* Frameworks */,
+				5739CC622528154A007B7554 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MelodyMaker;
+			productName = MelodyMaker;
+			productReference = 5739CC642528154B007B7554 /* MelodyMaker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5739CC5C2528154A007B7554 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					5739CC632528154A007B7554 = {
+						CreatedOnToolsVersion = 12.0;
+					};
+				};
+			};
+			buildConfigurationList = 5739CC5F2528154A007B7554 /* Build configuration list for PBXProject "MelodyMaker" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5739CC5B2528154A007B7554;
+			productRefGroup = 5739CC652528154B007B7554 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5739CC632528154A007B7554 /* MelodyMaker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5739CC622528154A007B7554 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5739CC7425281557007B7554 /* LaunchScreen.storyboard in Resources */,
+				5739CC9B2528E85A007B7554 /* F.wav in Resources */,
+				5739CC992528E85A007B7554 /* B.wav in Resources */,
+				5739CC7125281557007B7554 /* Assets.xcassets in Resources */,
+				5739CC9C2528E85A007B7554 /* C.wav in Resources */,
+				5739CC9A2528E85A007B7554 /* D.wav in Resources */,
+				5739CCA42528E9FB007B7554 /* Silent.wav in Resources */,
+				5739CC9E2528E85A007B7554 /* G.wav in Resources */,
+				5739CC9D2528E85A007B7554 /* E.wav in Resources */,
+				5739CC982528E85A007B7554 /* A.wav in Resources */,
+				5739CC6F2528154B007B7554 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5739CC602528154A007B7554 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5739CC8725281DCC007B7554 /* NotesModel.swift in Sources */,
+				5739CC6C2528154B007B7554 /* ViewController.swift in Sources */,
+				5739CC8D252838B7007B7554 /* MelodyModel.swift in Sources */,
+				5739CCA82528FDBC007B7554 /* MakerViewController.swift in Sources */,
+				5739CC682528154B007B7554 /* AppDelegate.swift in Sources */,
+				5739CCB125294E81007B7554 /* FinalViewController.swift in Sources */,
+				5739CC6A2528154B007B7554 /* SceneDelegate.swift in Sources */,
+				5739CCAD252912E1007B7554 /* HitViewController.swift in Sources */,
+				5739CCA12528E9A3007B7554 /* SoundManager.swift in Sources */,
+				5739CC80252816EA007B7554 /* GAModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5739CC6D2528154B007B7554 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5739CC6E2528154B007B7554 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5739CC7225281557007B7554 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5739CC7325281557007B7554 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5739CC7625281557007B7554 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5739CC7725281557007B7554 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5739CC7925281557007B7554 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZJPZSCKR4Z;
+				INFOPLIST_FILE = MelodyMaker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.codewithlaura.MelodyMaker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5739CC7A25281557007B7554 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZJPZSCKR4Z;
+				INFOPLIST_FILE = MelodyMaker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.codewithlaura.MelodyMaker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5739CC5F2528154A007B7554 /* Build configuration list for PBXProject "MelodyMaker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5739CC7625281557007B7554 /* Debug */,
+				5739CC7725281557007B7554 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5739CC7825281557007B7554 /* Build configuration list for PBXNativeTarget "MelodyMaker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5739CC7925281557007B7554 /* Debug */,
+				5739CC7A25281557007B7554 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5739CC5C2528154A007B7554 /* Project object */;
+}
