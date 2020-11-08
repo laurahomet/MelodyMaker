@@ -13,22 +13,18 @@ class MakerViewController: UIViewController {
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var listenAgainButton: UIButton!
     
-    //--- MARK: Status Flags
-    enum Status {
-        case initialization
-        case evaluation
-        case generation
-    }
-    
     //--- MARK: Melody Variables
-    let model = GAModel()
-    var melodies = [[String]]()
-    var scores = [Float]()
-    var soundPlayer = SoundManager()
     let numNotes = 8
-    var melodyIndex = 0
-    var status:Status = .initialization
+    var melodyModel = MelodyModel()
+    var melodies = [[String]]()
     var bestMelody = [String]()
+    var melodyIndex = 0
+    
+    //--- MARK: Genetic Algorithm Variables
+    let gaModel = GAModel()
+    var scores = [Float]()
+    
+    //--- MARK: VC Variables
     var hitView:HitViewController?
     
     override func viewDidLoad() {
@@ -47,30 +43,27 @@ class MakerViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         
-        print(status) //Must be in GA Model
-        
-        switch status {
+        switch gaModel.status {
         
             case .initialization:
-                melodies = model.initialization(numNotes: numNotes)
+                melodies = gaModel.initialization(numNotes: numNotes)
                 for _ in 1...melodies.count {
                     scores.append(0.0)
                 }
-                status = .evaluation
+                gaModel.status = .evaluation
                 
             case .evaluation:
                 break
                 
             case .generation:
-                melodies = model.reproduction(numNotes: numNotes, melodies: melodies, scores: scores)
-                for _ in 1...melodies.count {
-                    scores.append(0.0)
+                melodies = gaModel.reproduction(numNotes: numNotes, melodies: melodies, scores: scores)
+                for m in 0...melodies.count-1 {
+                    scores[m] = 0.0
                 }
-                status = .evaluation
+                gaModel.status = .evaluation
         }
         
-        //Play melody
-        playMelody(melody: melodies[melodyIndex])
+        melodyModel.playMelody(melody: melodies[melodyIndex])
         
     }
     
@@ -78,8 +71,7 @@ class MakerViewController: UIViewController {
     //--- MARK: IBActions
     @IBAction func listenAgainTapped(_ sender: Any) {
         
-        playMelody(melody: melodies[melodyIndex]) //Will be in meoldy model
-        
+        melodyModel.playMelody(melody: melodies[melodyIndex])
     }
     
     @IBAction func sliderChanged(_ sender: Any) {
@@ -99,7 +91,7 @@ class MakerViewController: UIViewController {
                 }
             }
             
-            status = .initialization //In case it´s the last loop
+            gaModel.status = .initialization //In case it´s the last loop
             performSegue(withIdentifier: "hitSegue", sender: self)
             
         } else {
@@ -109,13 +101,6 @@ class MakerViewController: UIViewController {
             viewWillAppear(true) //Want this to happen before melody
         }
         
-    }
-
-    func playMelody(melody: [String]) {
-        
-        for note in melodies[melodyIndex] {
-            soundPlayer.playSound(note: note)
-        }
     }
     
 }
@@ -127,7 +112,6 @@ extension MakerViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let hitVC = segue.destination as! HitViewController
         hitVC.bestMelody = self.bestMelody
-        hitVC.soundPlayer = self.soundPlayer
         hitVC.modalPresentationStyle = .fullScreen
         hitVC.delegate = self
     }
@@ -138,7 +122,7 @@ extension MakerViewController {
 extension MakerViewController: HitProtocol {
     
     func keepTraining() {
-        status = .generation
+        gaModel.status = .generation
         melodyIndex = 0
         
 //        viewDidAppear(true)
