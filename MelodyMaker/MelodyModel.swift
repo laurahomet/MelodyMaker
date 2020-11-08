@@ -10,7 +10,7 @@ import Foundation
 class MelodyModel {
     
     let model = NotesModel()
-    let melody = [String]()
+    var soundPlayer = SoundManager()
     
     func getMelody(numNotes: Int) -> [String] {
         
@@ -23,5 +23,11 @@ class MelodyModel {
         return generatedNotes
     }
 
+    func playMelody(melody: [String]) {
+        
+        for note in melody {
+            soundPlayer.playSound(note: note)
+        }
+    }
     
 }
