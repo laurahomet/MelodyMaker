@@ -14,35 +14,27 @@ class FinalViewController: UIViewController {
     
     //--- MARK: Variables
     var bestMelody = [String]()
-    var soundPlayer = SoundManager()
+    var model = MelodyModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         instantiateMainView()
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         
         var i=0
         while(i < 8) {
-            playMelody(melody: bestMelody) //Melody model protocol?
+            model.playMelody(melody: bestMelody) //Melody model protocol?
             i += 1
         }
-        
-    }
-    
-    func playMelody(melody: [String]) { //In melody model later
-        
-        for note in melody {
-            soundPlayer.playSound(note: note)
-        }
     }
     
     
-    //---MARK: IBActions
+    //--- MARK: IBActions
     @IBAction func backToStartTapped(_ sender: Any) {
+        
         //Go to VC
         if mainView != nil {
             goToMainView()
