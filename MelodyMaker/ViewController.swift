@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     
     //--- MARK: IBActions
     @IBAction func startTapped(_ sender: Any) {
+        
         if makerView != nil {
             goToMakerView()
         }
@@ -42,5 +43,3 @@ extension ViewController {
     }
     
 }
-
-
